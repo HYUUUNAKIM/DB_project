@@ -43,7 +43,14 @@
 
 ```mermaid
 graph LR
-A(입력)-->B[연산]
-B-->C(출력)
+A((속성))---B[연산]
+B---C{출력}
 ```
-https://richwind.co.kr/147
+
+```mermaid
+graph LR
+A((이름))---Z[학생]
+B((학교))---Z[학생]
+```
+
+
