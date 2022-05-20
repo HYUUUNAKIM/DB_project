@@ -263,3 +263,60 @@ s((학생이름))---Q[대기자]
 
 강의는 여러 출석부를 만들어낼 수 있고 출석부는 하나의 강의에만 해당하므로 일대다 
 
+create table 학생
+
+create database 학원관리;
+
+create table 학생 (
+     학생번호 int,
+     학생이름 varchar(20),
+     학교 varchar(20),
+     학년 int,
+     주소 varchar(50),
+     학생전화번호 varchar(20),
+     학부모전화번호 varchar(20),
+     PRIMARY KEY(학생번호)
+     );
+
+ create table 강의 (
+     수업이름 varchar(10),
+     강사이름 varchar(10),
+     교재이름 varchar(10),
+     수업시간 varchar(10),
+     PRIMARY KEY(수업이름)
+     );
+ create table 납입 (
+     학생번호 int,
+     학생이름 varchar(20),
+     결제날짜 varchar(20),
+     결제금액 int,
+     결제사유 varchar(50),
+     결제수단 varchar(20)
+     );
+
+ create table 원비 (
+     학년 int,
+     금액 int
+     );
+
+ create table 출석부 (
+     수업이름 varchar(10),
+     수업날짜 varchar(10),
+     학생번호 int,
+     학생이름 varchar(20),
+     출석여부 varchar(10),
+     단원평가점수 int
+     );
+
+ create table 문자 (
+     전송일시 varchar(20),
+     수신전화번호 varchar(20),
+     문자내용 varchar(1000)
+     );
+
+ create table 대기자 (
+     학부모전화번호 varchar(20),
+     학교 varchar(20),
+     학년 int,
+     학생이름 varchar(20)
+     );
